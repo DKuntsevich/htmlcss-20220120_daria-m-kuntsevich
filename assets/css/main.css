@@ -1,6 +1,5 @@
 @import '../fonts/fonts.css';
 
-
 :root {
     --white: #ffffff;
     --black: #212429;
@@ -13,11 +12,17 @@
     --grey-3: #ACB5BD;
     --grey-4: #495057;
 
+    --blue-2: #2342C0;
+    --purple-2: #5028C6;
+
     --error: var(--red);
     --success: var(--blue);
 
     --primary: var(--blue);
     --secondary: var(--purple);
+
+    --width-primary: 182px;
+    --height-primary: 48px;
 }
 
 * {
