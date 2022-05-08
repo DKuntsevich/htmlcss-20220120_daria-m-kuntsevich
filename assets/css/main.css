@@ -1,64 +1,89 @@
-@import 'reset.css';
+@import '../css/reset.css';
 @import '../fonts/fonts.css';
 
-@import '../../components/container/container.css';
-@import '../../components/header/header.css';
+@import '../../components/button/button.css';
+@import '../../components/accordion.css';
+@import '../../components/histogram/histogram.css';
+@import '../../components/skeleton/skeleton.css';
+@import '../../components/tooltip/tooltip.css';
+@import '../../components/modal/modal.css';
+@import '../../components/calendar/calendar.css';
+@import '../../components/avatar/avatar.css';
+@import '../../components/checkbox/checkbox.css';
+@import '../../components/radio/radio.css';
+@import '../../components/toggler/toggler.css';
+@import '../../components/input/input.css';
+@import '../../components/burger-menu/burger-menu.css';
 @import '../../components/footer/footer.css';
-@import '../../components/card/card.css';
+@import '../../components/header/header.css';
 @import '../../components/preview/preview.css';
-@import '../../components/template-page/template-page.css';
+@import '../../components/page/page.css';
+@import '../../components/container/container.css';
+@import '../../components/card/card.css';
+@import '../../components/component-view/component-view.css';
 @import '../../components/menu/menu.css';
-
+@import '../../components/tabs/tabs.css';
+@import '../../components/dark-mode/dark-mode.css';
 :root {
     --white: #ffffff;
     --black: #212429;
     --pink: #F784AD;
     --purple: #7048E8;
-    --blue: #374FC7;
+    --blue: #4263EB;
     --red: #F03D3E;
     --grey-1: #F8F9FA;
     --grey-2: #DDE2E5;
     --grey-3: #ACB5BD;
     --grey-4: #495057;
-
-    --blue-3: #4263EB;
-
-    --blue-2: #2342C0;
-    --purple-2: #5028C6;
-
+    --grey-5: #F9FAFC;
     --error: var(--red);
     --success: var(--blue);
-
-    --primary: var(--blue);
-    --secondary: var(--purple);
-
-    --width-primary: 182px;
-    --height-primary: 48px;
-
-    --histogram-width: 354px;
-
-    --background: #F9FAFC;
-}
-* 
-    {
-        font-family: 'Roboto', sans-serif;
-    }
-    {
-        font-family: 'Inter', sans-serif;
-    }
-* {
-    font-family: 'Inter', sans-serif;
-}
-.page {
-    background: #f9fafc;
+    --main-bg-color: var(--grey-5);
+    --darken-percentage: 12%;
+    --primary-h: 228;
+    --primary-s: 80%;
+    --primary-l: 59%;
+    --secondary-h: 255;
+    --secondary-s: 77%;
+    --secondary-l: 59%;        
+    --primary-bg: var(--blue);
+    --secondary-bg: var(--purple);
+    --alternate-bg: var(--white);    
+    --primary-bg-hover: hsl(var(--primary-h), calc(var(--primary-s) - var(--darken-percentage)), calc(var(--primary-l) - var(--darken-percentage)));
+    --secondary-bg-hover: hsl(var(--secondary-h), calc(var(--secondary-s) - var(--darken-percentage)), calc(var(--secondary-l) - var(--darken-percentage)));
+    --alternate-bg-hover: var(--white);  
+    --primary-border: var(--blue);
+    --secondary-border: var(--purple);
+    --alternate-border: var(--grey-3);        
+    --primary-border-hover: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - var(--darken-percentage)));
+    --secondary-border-hover: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) - var(--darken-percentage)));
+    --alternate-border-hover: var(--black);  
+    --primary-text-color: var(--white);
+    --secondary-text-color: var(--white);
+    --alternate-text-color: var(--black); 
+    
+    --border: var(--grey-3);
+    --main-border: var(--grey-2);
+    --block-bg: var(--grey-2);    
+    --text-main: var(--black); 
+    --text-details: var(--grey-4);
+    --text-secondary: var(--grey-2);       
+    --text-footer: var(--grey-3); 
+    --control-bg: var(--grey-3); 
 }
 body {
     font-family: 'Roboto', sans-serif;
-}
-html, body {
     height: 100%;
 }
+html {
+    height: 100%;
+}
+
 main {
     min-height: 400px;
+    background: #F9FAFC;
+}
+
+.page {
     background: #F9FAFC;
 }

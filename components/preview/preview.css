@@ -1,11 +1,22 @@
 .preview {
-    display: flex;
-    padding: 67px 0 92px;
-    gap: 30px;
-    flex-wrap: wrap;
+  --preview-bg-color: #F9FAFC;
+  background-color: var(--preview-bg-color);
+  padding-bottom: 3.375rem;
 }
-@media only screen and (max-width: 768px) {
-    .preview {
-        padding: 22px 16px;
-    }
+.preview__inner {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10.25rem, 1fr));
+  gap: 0.9375rem;
+}
+
+@media screen and (min-width: 768px) {
+  .preview {
+      padding-bottom: 12.75rem;
+  }
+  .preview__inner {
+      margin-top: 4.25rem;
+      grid-template-columns: repeat(auto-fill, minmax(21.875rem, 1fr));        
+      gap: 1.875rem;
+  }
 }

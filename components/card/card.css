@@ -1,51 +1,106 @@
 .card {
-    background: var(--white);
-    box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
-    border-radius: 12px;
-    padding: 32px 25px;  
-    height: 367px; 
-    flex-basis: 350px;
-    font-family: Inter, sans-serif;
-    box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
+  background-color: var(--white);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;    
+  border-radius: 8px;
+  height: 13.125rem;
+  margin-bottom: 0.4375em;
+  text-decoration: none;
 }
-.card__top {
-    
+.card__content {
+  flex-grow: 1;
+  border-bottom: 1px solid var(--main-border);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.card__body {
-    padding-top: 24px;  
+.card__title {    
+  color: var(--text-main);
+  margin: 0;
+  font-family: Inter;    
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
 }
-.card__title {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 25px;
-    text-align: center;
-    color: var(--black);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.card__title_second {
+  font-size: 0.875rem;
+  line-height: 1.57;
+  color: var(--text-footer);
+}
+.card__title-container {
+  align-items: center;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
 }
 
-@media only screen and (max-width: 768px) {
-    .card {
-        padding: 0; 
-        display: grid;  
-        grid-template-rows: 1fr auto;
-    }
 
-    .card__top {
-        padding: 10px;
-    }
+.card__calendar {
+  width: 7.5rem;
+}    
+.card__modal {
+  flex-grow: 1;
+}
 
-    .card__body {
-        padding: 12px 10px 10px;
-        border-top: var(--grey-2) solid 1px;
-    }
+.card__custom-elements {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  width: 100%;
+  row-gap: 0.625rem;
+  padding: 0.625rem;
+  box-sizing: border-box;
+}
 
-    .card__title {
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        margin: 0;
-    }
+.card__custom-elements_one-column {
+  grid-template: repeat(3, 1fr) / repeat(1, 1fr);
+}
+
+.card__custom-elements_short-gap {
+  row-gap: 0.15rem;
+}    
+
+.card__custom-elements_column-gap {
+  column-gap: 0.625rem;
+}    
+
+@media screen and (min-width: 768px) {
+  .card {
+      border-radius: 12px;
+      height: 22.9375rem;
+      padding: 2rem;
+      margin-bottom: 0;
+      gap: 1.5625rem;
+  }
+  .card__content {
+      border-bottom: none;          
+  }
+  .card__title {
+      font-family: Roboto;    
+      font-weight: 500;
+      font-size: 1.3125rem;
+      line-height: 1.19;
+      padding-bottom: 0.375rem;
+  }
+  .card__title_second {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.1875;
+      color: var(--text-main);
+  }
+  .card__calendar {
+      width: 10.4375rem;
+  }    
+
+  .card__custom-elements {
+      row-gap: 1rem;
+      padding: 0;
+  }
+
+  .card__custom-elements_short-gap {
+      row-gap: 0.3125rem;
+  }    
 }
