@@ -1,0 +1,110 @@
+.toggle {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+.toggle__input {
+  position: absolute;
+  outline: none;
+  clip: rect(0, 0, 0, 0);
+}
+.toggle__state {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  cursor: pointer;
+}
+
+.toggle__control {
+  width: 3.25em;
+  height: 1.75em;
+  border: 1px solid var(--main-border);
+  box-sizing: border-box;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1px;
+  background-color: var(--alternate-bg);
+}
+
+.toggle__icon {
+  width: 1.5em;
+  height: 1.5em;
+  background: var(--block-bg);
+  border-radius: 1em;
+}
+
+.toggle__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.5;
+  color: var(--text-details);
+}
+
+.toggle__input:checked ~ .toggle__state .toggle__control {
+  background: var(--primary-bg);
+  border-color: var(--primary-border);
+  justify-content: flex-end;
+}
+.toggle__input:checked ~ .toggle__state .toggle__icon {
+  background: var(--alternate-bg);
+}
+.toggle__input:focus ~ .toggle__state .toggle__title {
+  text-decoration: underline;
+}
+.toggle__input:disabled ~ .toggle__state .toggle__control {
+  background: var(--block-bg);    
+}
+.toggle__input:disabled ~ .toggle__state .toggle__control .toggle__icon {
+  background: var(--control-bg);
+  opacity: 0.25;
+}
+.toggle__input:disabled ~ .toggle__state {
+  cursor: default;
+}
+.toggle__input:checked ~ .toggle__state .toggle__button_close,
+.toggle__input:not(:checked) ~ .toggle__state .toggle__button_open {
+  display: block;
+}
+.toggle__input:checked ~ .toggle__state .toggle__button_open,
+.toggle__input:not(:checked) ~ .toggle__state .toggle__button_close {
+  display: none;
+}
+.toggle__input:checked ~ .toggle__state .toggle__icon_burger {
+  background-color: transparent;
+}
+.toggle__button_close {
+  border-radius: 50%;
+  background-color: var(--block-bg);
+  padding: 0.25rem;
+}
+
+.toggle__icon_burger {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.toggle__button {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 0;  
+  padding: 0.25rem;        
+}
+
+.toggle_preview {
+  pointer-events: none;
+  font-size: 0.625rem;
+}
+
+@media screen and (min-width: 768px) {
+  .toggle_preview {
+      font-size: 1rem;
+  }    
+} 
